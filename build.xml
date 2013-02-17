@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- $Id: build.xml,v 1.2 2013/02/09 05:13:00 solovam Exp $ -->
+
+<project basedir="." default="all" name="TetrisEngine">
+
+	<path id="project.classpath">
+	</path>
+
+	<target name="init">
+		<mkdir dir="bin"/>
+		<mkdir dir="jar"/>
+		<mkdir dir="doc"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="bin"/>
+		<delete dir="jar"/>
+		<delete dir="doc"/>
+	</target>
+
+	<target depends="init" name="build">
+                <javac destdir="bin">
+			<src path="src"/>
+			<src path="test"/>
+			<classpath refid="project.classpath"/>
+			<compilerarg value="-Xlint"/>
+		</javac>
+	</target>
+
+	<target depends="build" name="tetris_engine.jar">
+		<jar destfile="./jar/tetris_engine.jar" >
+			<fileset dir="src" includes="**/*.java" />
+			<fileset dir="bin" includes="**/*.class" />
+		</jar>
+	</target>
+
+	<target name="doc" depends="init">
+		<javadoc destdir="doc" author="true" version="true" use="true">
+			<packageset dir="src" defaultexcludes="yes">
+      				<include name="**"/>
+			</packageset>
+			<classpath refid="project.classpath"/>
+		</javadoc>
+	</target>
+
+	<target depends="build, tetris_engine.jar, doc" name="all">
+	</target>
+
+</project>

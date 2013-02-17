@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.11.00.50.38;	author solovam;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@/*
+ * $Id$
+ */
+package com.solovyev.games.tetris;
+
+import java.util.EventObject;
+
+public class TetrisEvent extends EventObject
+{
+        private static final long serialVersionUID = 1L;
+
+        public TetrisEvent(TetrisEngine tetrisEngine)
+        {
+                super(tetrisEngine);
+        }
+}@
