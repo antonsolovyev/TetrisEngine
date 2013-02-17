@@ -24,13 +24,13 @@ public class TetrisEngineImpl extends AbstractTetrisEngine
                 timer = new Timer();
                 
                 timer.scheduleAtFixedRate(
-                                new TimerTask()
+                        new TimerTask()
+                        {
+                                public void run()
                                 {
-                                        public void run()
-                                        {
-                                                timerEvent();
-                                        }
-                                }, 0, getTimerTick());
+                                        timerEvent();
+                                }
+                        }, 0, getTimerTick());
         }
         
         @Override
