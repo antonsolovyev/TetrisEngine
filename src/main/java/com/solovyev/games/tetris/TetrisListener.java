@@ -5,7 +5,8 @@ package com.solovyev.games.tetris;
 
 import java.util.EventListener;
 
+
 public interface TetrisListener extends EventListener
 {
-        public void stateChanged(TetrisEvent e);
+    public void stateChanged(TetrisEvent e);
 }

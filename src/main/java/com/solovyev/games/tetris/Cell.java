@@ -5,42 +5,50 @@ package com.solovyev.games.tetris;
 
 import java.io.*;
 
+
 public class Cell implements Serializable
 {
-        private static final long serialVersionUID = 0L;
-        private int x;
-        private int y;
-        private Color color;
-        
-        public enum Color
-        {
-                CYAN, BLUE, ORANGE, YELLOW, GREEN, PURPLE, RED;
-        }
+    private static final long serialVersionUID = 0L;
 
-        Cell(int x, int y, Color color)
-        {
-                this.x = x;
-                this.y = y;
-                this.color = color;
-        }
-     
-        public int getX()
-        {
-                return x;
-        }
+    public enum Color
+    {
+        CYAN,
+        BLUE,
+        ORANGE,
+        YELLOW,
+        GREEN,
+        PURPLE,
+        RED;
+    }
 
-        public int getY()
-        {
-                return y;
-        }
-        
-        public Color getColor()
-        {
-                return color;
-        }
-        
-        public String toString()
-        {
-                return "x: " + x + " y: " + y + " color: " + color;
-        }
+    private int x;
+    private int y;
+    private Color color;
+
+    Cell(int x, int y, Color color)
+    {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
+
+    public int getX()
+    {
+        return x;
+    }
+
+    public int getY()
+    {
+        return y;
+    }
+
+    public Color getColor()
+    {
+        return color;
+    }
+
+    public String toString()
+    {
+        return "x: " + x + " y: " + y + " color: " + color;
+    }
 }

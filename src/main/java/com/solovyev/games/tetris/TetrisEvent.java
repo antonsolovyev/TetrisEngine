@@ -5,12 +5,13 @@ package com.solovyev.games.tetris;
 
 import java.util.EventObject;
 
+
 public class TetrisEvent extends EventObject
 {
-        private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-        public TetrisEvent(TetrisEngine tetrisEngine)
-        {
-                super(tetrisEngine);
-        }
+    public TetrisEvent(TetrisEngine tetrisEngine)
+    {
+        super(tetrisEngine);
+    }
 }
