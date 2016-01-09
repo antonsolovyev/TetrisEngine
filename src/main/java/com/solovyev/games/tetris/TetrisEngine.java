@@ -6,7 +6,7 @@ package com.solovyev.games.tetris;
 import java.util.List;
 
 
-public interface TetrisEngine
+interface TetrisEngine
 {
     public enum GameState
     {
@@ -14,50 +14,50 @@ public interface TetrisEngine
         RUNNING,
         PAUSED,
         GAMEOVER,
-        FREEFALL;
+        FREEFALL
     }
 
-    public void start();
+    void start();
 
-    public void stop();
+    void stop();
 
-    public void pause();
+    void pause();
 
-    public void resume();
+    void resume();
 
-    public void movePieceLeft();
+    void movePieceLeft();
 
-    public void movePieceRight();
+    void movePieceRight();
 
-    public void rotatePieceCounterclockwise();
+    void rotatePieceCounterclockwise();
 
-    public void rotatePieceClockwise();
+    void rotatePieceClockwise();
 
-    public void dropPiece();
+    void dropPiece();
 
-    public Piece getPiece();
+    Piece getPiece();
 
-    public Piece getNextPiece();
+    Piece getNextPiece();
 
-    public List<Cell> getSea();
+    List<Cell> getSea();
 
-    public int getHeight();
+    int getHeight();
 
-    public int getWidth();
+    int getWidth();
 
-    public int getScore();
+    int getScore();
 
-    public GameState getGameState();
+    GameState getGameState();
 
-    public int getLineCount();
+    int getLineCount();
 
-    public int getSpeed();
+    int getSpeed();
 
-    public int getPieceCount();
+    int getPieceCount();
 
-    public void addTetrisListener(TetrisListener l);
+    void addTetrisListener(TetrisListener l);
 
-    public void removeTetrisListener(TetrisListener l);
+    void removeTetrisListener(TetrisListener l);
 
-    public TetrisListener[] getTetrisListeners();
+    TetrisListener[] getTetrisListeners();
 }

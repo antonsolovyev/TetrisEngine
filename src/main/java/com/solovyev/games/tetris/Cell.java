@@ -18,7 +18,7 @@ public class Cell implements Serializable
         YELLOW,
         GREEN,
         PURPLE,
-        RED;
+        RED
     }
 
     private int x;

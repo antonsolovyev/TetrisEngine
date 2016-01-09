@@ -8,5 +8,5 @@ import java.util.EventListener;
 
 public interface TetrisListener extends EventListener
 {
-    public void stateChanged(TetrisEvent e);
+    void stateChanged(TetrisEvent e);
 }
