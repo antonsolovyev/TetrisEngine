@@ -6,9 +6,9 @@ package com.solovyev.games.tetris;
 import java.util.List;
 
 
-interface TetrisEngine
+public interface TetrisEngine
 {
-    public enum GameState
+    enum GameState
     {
         IDLE,
         RUNNING,
